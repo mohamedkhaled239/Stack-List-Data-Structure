@@ -13,10 +13,10 @@ public:
 
 void push_back(int val) {
 	if (size >= top) {
-		cout << "List is Full" << endl;
+		cout << "stack is Full" << endl;
 		return;
 	}
-	cout << val << " is pushed into the List" << endl;
+	cout << val << " is pushed into the stack" << endl;
 	arr[size++] = val;
 }
 
@@ -41,10 +41,10 @@ return  min;
 
 void pop() {
 	if (size == 0) {
-		cout << "the List is already empty" << endl;
+		cout << "the stack is already empty" << endl;
 		return;
 	}
-	cout << arr[--size] << " (last element) is removed from the List" << endl;
+	cout << arr[--size] << " (last element) is removed from the stack" << endl;
 	return;
 }
 
