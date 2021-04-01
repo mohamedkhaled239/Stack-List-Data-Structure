@@ -1,0 +1,64 @@
+#include <iostream>
+#define top 5
+using namespace std;
+class stack {
+	int size;
+	int arr[top];
+public:
+	stack() {
+		size = 0;
+	}
+
+
+
+void push_back(int val) {
+	if (size >= top) {
+		cout << "List is Full" << endl;
+		return;
+	}
+	cout << val << " is pushed into the List" << endl;
+	arr[size++] = val;
+}
+
+
+void print() {
+	for (int i = 0; i < size; ++i) cout << arr[i] << " ";
+	cout << endl;
+	return;
+}
+int  FindMin(){
+
+        int min = arr[0];
+        for (int i = 0; i < size; ++i) {
+           if(arr[i] <min){
+                min = arr[i];
+
+        }
+}
+return  min;
+}
+
+
+void pop() {
+	if (size == 0) {
+		cout << "the List is already empty" << endl;
+		return;
+	}
+	cout << arr[--size] << " (last element) is removed from the List" << endl;
+	return;
+}
+
+};
+int main() {
+	stack s;
+	s.push_back(1);
+    s.push_back(3);
+	s.push_back(5);
+	s.push_back(7);
+	s.push_back(20);
+	s.pop();
+    cout<<"small element in arr= "<<s.FindMin()<<endl;
+
+	s.print();
+	return 0;
+}
